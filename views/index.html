@@ -15,10 +15,10 @@
     async function generateReadme(){
         document.getElementById("wait").innerHTML = "Aguarde, o readme está sendo gerado";
         let prompt = document.getElementById("prompt").value;
-        prompt = "Usando markdown, emojis e pensando em um repositório do github, faça um readme sobre " + prompt;
+        prompt = "Usando markdown emojis e pensando em um repositório do github faça um readme sobre " + prompt;
 
-        response = await fetch(`https://markdowngenerator.onrender.com/readme/${prompt}`);
-        window.location.href = `https://markdowngenerator.onrender.com/readme/${prompt}`;
+        response = await fetch(`http://markdowngenerator.onrender.com/readme/${prompt}`);
+        window.location.href = `http://markdowngenerator.onrender.com/readme/${prompt}`;
 
     }
 </script>
