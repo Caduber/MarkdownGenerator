@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readme Generator</title>
+</head>
+<body>
+        <input placeholder="Faça um readme sobre: " type="text" id="prompt">
+        <input type="button" value="submit" onclick="generateReadme()">
+    <p id="wait"></p>
+    <a href="/generated/readme.md" download>Baixe</a>
+</body>
+<script>
+    async function generateReadme(){
+        document.getElementById("wait").innerHTML = "Aguarde, o readme está sendo gerado";
+        let prompt = document.getElementById("prompt").value;
+        prompt = "Usando markdown, emojis e pensando em um repositório do github, faça um readme sobre " + prompt;
+
+        response = await fetch(`http://localhost:8080/readme/${prompt}`);
+        window.location.href = `http://localhost:8080/readme/${prompt}`;
+
+    }
+</script>
+</html>
