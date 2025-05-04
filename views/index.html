@@ -17,8 +17,8 @@
         let prompt = document.getElementById("prompt").value;
         prompt = "Usando markdown, emojis e pensando em um repositório do github, faça um readme sobre " + prompt;
 
-        response = await fetch(`https://markdowngenerator.onrender.com/${prompt}`);
-        window.location.href = `https://markdowngenerator.onrender.com/${prompt}`;
+        response = await fetch(`https://markdowngenerator.onrender.com/readme/${prompt}`);
+        window.location.href = `https://markdowngenerator.onrender.com/readme/${prompt}`;
 
     }
 </script>
